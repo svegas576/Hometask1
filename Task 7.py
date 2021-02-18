@@ -12,4 +12,3 @@ for a in gen:
         b = b + 1
     else:
         break
-        
