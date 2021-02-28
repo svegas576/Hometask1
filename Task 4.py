@@ -1,3 +1,6 @@
-nums = input("Введите числа: ").split(",")
-new_nums = [nums[i] for i in range(0, len(nums)) if nums[i] != nums[i-1]]
-print(new_nums)
+def my_func():
+    x = int(input("Введите действительное положительное число: "))
+    y = int(input("Введите целое отрицательное число: "))
+    print(x ** y)
+
+my_func()
