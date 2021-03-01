@@ -1,15 +1,23 @@
-import itertools
-import math
+#проект "Операции с Комплексными числами"
+class ComplexNumber:
+    def __init__(self, a, b, *args):
+        self.a = a
+        self.b = b
+        self.z = 'a + b * i'
 
-def fgen():
-    for el in itertools.count(1):
-        yield math.factorial(el)
-gen = fgen()
-b = 0
-for a in gen:
-    if b < 4:
-        print(a)
-        b = b + 1
-    else:
-        break
-        
+    def __add__(self, other):
+        print(f'Сумма комплексных чисел равна: ')
+        return f'z = {self.a + other.a} + {self.b + other.b} * i'
+
+    def __mul__(self, other):
+        print(f'Произведение комплексных чисел равно: ')
+        return f'z = {self.a * other.a - (self.b * other.b)} + {self.b * other.a} * i'
+
+    def __str__(self):
+        return f'z = {self.a} + {self.b} * i'
+
+z_1 = ComplexNumber(1, -2)
+z_2 = ComplexNumber(3, 4)
+print(z_1)
+print(z_1 + z_2)
+print(z_1 * z_2)
